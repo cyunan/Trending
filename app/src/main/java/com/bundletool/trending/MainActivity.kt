@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bundletool.trending.adapter.RepoAdapter
 import com.bundletool.trending.bean.RepoList
 import com.bundletool.trending.databinding.ActivityMainBinding
 import com.bundletool.trending.viewmoel.MainViewModel
