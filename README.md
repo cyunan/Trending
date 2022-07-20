@@ -10,11 +10,16 @@ RepoList
 Repo
 
 数据层
-首先RepoDataSource 和 Repository定义相关接口
-定义RetrofitClient 用来请求 API
+RepoDataSource 和 Repository定义相关接口
+
+RetrofitClient 用来请求 API
+
 RemoteRepoDataSource数据层-处理远程数据源
+
 MainRepository数据仓库：用于统筹缓存数据、远程数据
+
 RetrofitClient数据层-具体网络请求API实现类
+
 RepoService数据层-网络请求API
 
 领域层
