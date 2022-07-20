@@ -1,4 +1,4 @@
-package com.bundletool.trending.adapter
+package com.bundletool.trending.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,11 +6,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bundletool.trending.R
-import com.bundletool.trending.bean.RepoList
+import com.bundletool.trending.data.entity.RepoList
 
-class RepoAdapter(
-    private val repoList: RepoList
-) : RecyclerView.Adapter<RepoHolder>(){
+/**
+ *    author : ChenYuNan
+ *    date   : 2022/7/19
+ *    desc   : 适配器
+ */
+class RepoAdapter(private val repoList: RepoList): RecyclerView.Adapter<RepoHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepoHolder {
         return RepoHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_repo, parent, false))
     }
@@ -19,11 +22,9 @@ class RepoAdapter(
         holder.text.text = repoList.items.getOrNull(position)?.repo
     }
 
-    override fun getItemCount(): Int {
-        return repoList.count
-    }
+    override fun getItemCount(): Int = repoList.count
 }
 
-class RepoHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-    val text: TextView = itemView.findViewById(R.id.text)
+class RepoHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    val text : TextView = itemView.findViewById(R.id.text)
 }
